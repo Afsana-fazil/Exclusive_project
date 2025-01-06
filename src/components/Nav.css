@@ -1,0 +1,228 @@
+.container {
+    background: #000000;
+    color: #fafafa;
+    padding: 10px;
+}
+
+.shop {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.sale {
+    display: flex; 
+    justify-content: center;
+    flex: 1; 
+    gap: 10px;
+}
+
+.sale p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.sale button {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fafafa;
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.shop form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.shop select {
+    border: none;
+    outline: none;
+    background: #000000;
+    color: #fafafa;
+}
+
+.main {
+    border-bottom: 0.5px solid #d6d6d6;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.nav h1.left {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.nav ul.middle {
+    display: flex;
+    gap: 40px;
+}
+
+.nav ul.middle li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.nav ul.middle li a:hover {
+    text-decoration: underline;
+}
+
+.nav .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search {
+    padding: 7px 12px 7px 20px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding-right: 20px;
+}
+
+.right ul {
+    display: flex;
+    gap: 15px;
+}
+
+.right ul li a img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.right ul li a img:hover {
+    transform: translate(1px);
+}
+
+@media all and (max-width: 980px) {
+    .menu {
+        position: relative;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .nav ul.middle {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        border: 1px solid #d6d6d6;
+        padding: 8px 10px;
+        position: absolute;
+        top: 35px;
+        left: 20px;
+        z-index: 10;
+        gap: 15px;
+    }
+
+    .nav ul.middle.show {
+        display: flex; 
+    }
+
+    .nav ul.middle li a {
+        font-weight: 600;
+        text-decoration: underline;
+    }
+
+    .menu-toggle {
+        display: block; 
+        padding: 5px;
+        border: none;
+        color: #fff;
+        background: #000;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .shop form {
+        display: none;
+    }
+
+    .sale p  {
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 640px) {
+    .sale p {
+        font-size: 10px;
+    }
+
+    .sale button {
+        font-size: 10px;
+    }
+
+    .nav  {
+        padding-top: 20px;
+    }
+
+    .nav ul.middle li a {
+        font-size: 14px;
+    }
+
+    .search {
+        padding: 7px;
+        position: relative;
+    }
+    
+    .search input {
+        display: none;
+        position: absolute;
+        padding: 7px 12px;
+        border-radius: 4px;
+        font-size: 10px;
+        top: 32px;
+        right: 10px;
+    }
+
+    .search input.show {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .sale button {
+        display: none;
+    }
+
+    .nav h1.left {
+        font-size: 20px;
+    }
+    
+    .nav .right ul {
+        display: none;
+    }
+}
+
+@media all and (max-width: 360px) {
+    .nav ul.middle li a {
+        font-size: 12px;
+    }
+}
+
